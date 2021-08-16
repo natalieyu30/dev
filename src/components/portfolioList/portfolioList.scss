@@ -13,3 +13,18 @@
     box-shadow: 0px 0px 3px 3px rgba($main-color, 0.1);
   }
 }
+
+@include mediaMobile {
+  .portfolio-list {
+    // padding: 7px 10px 5px;
+    border: none;
+    // border-radius: 0;
+    &.active {
+      // background-color: transparent;
+      background-color: $main-color;
+      color: white;
+      // border-bottom: 2px solid $main-color;
+      box-shadow: none;
+    }
+  }
+}

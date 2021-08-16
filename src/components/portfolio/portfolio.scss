@@ -101,7 +101,7 @@
     }
 
     ul {
-      gap: 0px;
+      gap: 10px;
     }
     .container {
       margin-top: 20px;
@@ -119,6 +119,7 @@
 
 @include mediaMobile {
   .portfolio {
+    padding-top: 10px;
     gap: 0px;
     h1 {
       font-size: 26px;
@@ -126,6 +127,7 @@
     }
 
     ul {
+      margin: 5px;
       gap: 0px;
     }
     .container {
