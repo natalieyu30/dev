@@ -1,0 +1,21 @@
+// $main-color: #db576f;
+// $main-color: #333;
+$main-color: palevioletred;
+
+@mixin mediaMd {
+  @media screen and (min-width: 770px) and (max-width: 1080px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (min-width: 400px) and (max-width: 769px) {
+    @content;
+  }
+}
+
+@mixin mediaMobile {
+  @media screen and (max-width: 399px) {
+    @content;
+  }
+}

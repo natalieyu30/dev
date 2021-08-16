@@ -1,0 +1,103 @@
+@import "../../global.scss";
+
+.menu {
+  width: 30%;
+  height: 100vh;
+  background-color: $main-color;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: -30%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+
+  &.active {
+    transition: all 1s ease;
+    right: 0;
+    .nav-item {
+      transform: translate(0, 0);
+    }
+    // delay each nav item slide by 0.1s
+    @for $x from 1 through 4 {
+      .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.2s;
+      }
+    }
+  }
+
+  .img-self {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid white;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 26px;
+    font-weight: 300;
+    width: 115px;
+
+    .nav-item {
+      margin-bottom: 30px;
+      transform: translate(600px, 0);
+      transition: all 0.5s ease;
+      position: relative;
+
+      &:hover {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@include mediaMd {
+  .menu {
+    right: -40%;
+    width: 40%;
+    ul {
+      font-size: 24px;
+    }
+  }
+}
+
+@include mediaSm {
+  .menu {
+    right: -80%;
+    width: 80%;
+    .img-self {
+      width: 130px;
+      height: 130px;
+    }
+    ul {
+      font-size: 22px;
+    }
+  }
+}
+
+@include mediaMobile {
+  .menu {
+    right: -80%;
+    width: 80%;
+    .img-self {
+      width: 110px;
+      height: 110px;
+    }
+    ul {
+      font-size: 20px;
+    }
+  }
+}

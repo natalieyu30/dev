@@ -1,0 +1,142 @@
+@import "../../global.scss";
+
+.portfolio {
+  padding-top: 20px;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  h1 {
+    font-size: 50px;
+  }
+
+  ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    // overflow: hidden;
+
+    .item {
+      width: 300px;
+      height: 200px;
+      border-radius: 20px;
+      // border: 1px solid #ddd;
+      margin: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      transition: all 1s ease;
+      cursor: pointer;
+      box-shadow: 0px 0px 3px 3px rgba($main-color, 0.1);
+      h3 {
+        text-align: center;
+      }
+
+      &:hover {
+        background-color: $main-color;
+        img {
+          opacity: 0.3;
+          z-index: 0;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transition: all 1s ease;
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 20px;
+      }
+    }
+  }
+}
+@include mediaMd {
+  .portfolio {
+    gap: 10px;
+    h1 {
+      font-size: 38px;
+      overflow: hidden;
+    }
+
+    ul {
+      gap: 25px;
+    }
+    .container {
+      .item {
+        width: 260px;
+        height: 180px;
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  .portfolio {
+    gap: 10px;
+    h1 {
+      font-size: 30px;
+      overflow: hidden;
+    }
+
+    ul {
+      gap: 0px;
+    }
+    .container {
+      margin-top: 20px;
+      width: 100%;
+      .item {
+        width: 222px;
+        height: 160px;
+        h3 {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+@include mediaMobile {
+  .portfolio {
+    gap: 0px;
+    h1 {
+      font-size: 26px;
+      overflow: hidden;
+    }
+
+    ul {
+      gap: 0px;
+    }
+    .container {
+      width: 100%;
+      .item {
+        width: 170px;
+        height: 120px;
+        h3 {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

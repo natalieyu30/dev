@@ -1,0 +1,141 @@
+@import "../../global.scss";
+
+.works {
+  // background-color: lavenderblush;
+  background-color: #e9cbcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .arrow-left {
+    position: absolute;
+    left: 100px;
+    cursor: pointer;
+  }
+  .arrow-right {
+    position: absolute;
+    right: 100px;
+    cursor: pointer;
+  }
+
+  .slider {
+    height: 350px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease;
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .item {
+        width: 700px;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left {
+          flex: 4;
+          height: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // background-color: lavenderblush;
+
+          .left-container {
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2 {
+              font-size: 20px;
+              overflow: hidden;
+            }
+            p {
+              font-size: 13px;
+              overflow: hidden;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 600;
+              text-decoration: underline;
+              overflow: hidden;
+            }
+          }
+        }
+
+        .right {
+          flex: 8;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          img {
+            width: 400px;
+            transform: rotate(10deg);
+          }
+        }
+      }
+    }
+  }
+}
+@include mediaMd {
+  .works {
+    .arrow-left,
+    .arrow-right {
+      font-size: 50px !important;
+    }
+    .slider {
+      .container {
+        .item {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  .works {
+    .arrow-left,
+    .arrow-right {
+      display: none !important;
+    }
+    .slider {
+      height: 90vh;
+      width: 100vw;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      .container {
+        .item {
+          width: 70%;
+          // height: 200px;
+          .left {
+            .left-container {
+              height: 100%;
+
+              h2 {
+                font-size: 18px;
+              }
+              p {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

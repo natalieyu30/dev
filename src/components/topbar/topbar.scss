@@ -1,0 +1,121 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: $main-color;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 0px 3px 1px rgba($main-color, 0.1);
+  transition: all 0.8s ease;
+
+  .wrapper {
+    padding: 0px 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      .logo {
+        margin-right: 30px;
+        img {
+          height: 28px;
+        }
+      }
+
+      .item-container {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-right: 15px;
+
+        span {
+          font-size: 15px;
+        }
+      }
+      @include mediaSm {
+        .item-container {
+          display: none;
+        }
+      }
+    }
+
+    .right {
+      .hamburger {
+        width: 32px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        overflow: hidden;
+
+        span {
+          width: 100%;
+          height: 3px;
+          position: relative;
+          background-color: $main-color;
+          transform-origin: left;
+          transition: all 1s ease;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $main-color;
+    color: white;
+
+    .logo {
+      img {
+        content: url("../../assets/natdev_wht.png");
+      }
+    }
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+          top: -2px;
+          left: 3px;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+          top: 1px;
+          right: -2px;
+        }
+      }
+    }
+  }
+}
+
+@include mediaMobile {
+  .topbar {
+    height: 50px;
+    .wrapper {
+      padding: 0px 10px;
+      .left {
+        .logo {
+          img {
+            height: 20px;
+          }
+        }
+        .item-container {
+          display: none;
+        }
+      }
+    }
+  }
+}

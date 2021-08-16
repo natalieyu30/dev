@@ -1,0 +1,157 @@
+@import "../../global.scss";
+
+.intro {
+  // background: url("../../assets/flower3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // background-image: linear-gradient(to bottom, white, $main-color);
+  color: #c65b7c;
+  position: relative;
+  .intro-img {
+    flex: 2.5;
+    img {
+      width: 100%;
+    }
+  }
+
+  .left {
+    flex: 3;
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 80px;
+      font-weight: 400;
+    }
+
+    h2 {
+      margin: 16px 0;
+      font-size: 32px;
+      span {
+        color: #5b3758;
+        font-weight: 500;
+      }
+      .ityped-cursor {
+        animation: blink_cursor 1.2s infinite;
+      }
+      @keyframes blink_cursor {
+        60% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+    p {
+      font-size: 22px;
+      font-weight: 300;
+    }
+  }
+  @include mediaMd {
+    .left {
+      flex: 2;
+      h1 {
+        font-size: 60px;
+      }
+      h2 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    // position: relative;
+
+    a {
+      position: absolute;
+      bottom: 20px;
+      right: 100px;
+
+      .icon {
+        animation: blink 2s infinite;
+      }
+
+      @keyframes blink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@include mediaSm {
+  .intro {
+    flex-direction: column;
+    .intro-img {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .left {
+      gap: 16px;
+      justify-content: flex-start;
+      h1 {
+        font-size: 50px;
+        font-weight: 500;
+      }
+      h2 {
+        font-size: 23px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .right {
+      display: none;
+    }
+  }
+}
+
+@include mediaMobile {
+  .intro {
+    flex-direction: column;
+    .intro-img {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .left {
+      gap: 8px;
+      h1 {
+        font-size: 38px;
+        font-weight: 500;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  .right {
+    display: none;
+  }
+}
