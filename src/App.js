@@ -11,6 +11,8 @@ import "./app.scss";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  console.log(window.onscroll);
   return (
     <div className="app">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

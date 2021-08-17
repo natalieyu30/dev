@@ -3,14 +3,14 @@
 .portfolio-list {
   padding: 7px 10px;
   font-size: 15px;
-  color: $main-color;
+  color: $mint-green-color;
   // border: 2px solid $main-color;
   border-radius: 10px;
   cursor: pointer;
   &.active {
-    background-color: $main-color;
+    background-color: $mint-green-color;
     color: white;
-    box-shadow: 0px 0px 3px 3px rgba($main-color, 0.1);
+    box-shadow: 0px 0px 3px 3px rgba($mint-green-color, 0.1);
   }
 }
 
@@ -21,7 +21,7 @@
     // border-radius: 0;
     &.active {
       // background-color: transparent;
-      background-color: $main-color;
+      background-color: $mint-green-color;
       color: white;
       // border-bottom: 2px solid $main-color;
       box-shadow: none;

@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./topbar.scss";
 import { Person, Mail } from "@material-ui/icons";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
+  // const [isScrolled, setIsScrolled] = useState(false);
+
+  // window.onscroll = () => {
+  //   setIsScrolled(window.pageYOffset === 0 ? false : true);
+  //   return () => (window.onscroll = null);
+  // };
+
+  // console.log(isScrolled);
+
+  // useEffect(() => {
+  //   console.log(window.pageYOffset);
+  // }, []);
+
   return (
     <div className={menuOpen ? "topbar active" : "topbar"}>
       <div className="wrapper">
