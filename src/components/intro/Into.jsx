@@ -10,7 +10,7 @@ export default function Into() {
       showCursor: true,
       loop: false,
       cursorChar: "_",
-      strings: ["Web Developer, Programmer, Designer & Entrepreneur"],
+      strings: ["Web Developer, Programmer & Designer"],
     });
     // console.log(textRef.current);
   }, []);

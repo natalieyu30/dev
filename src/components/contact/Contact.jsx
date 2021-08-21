@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { Person, Mail, GitHub, LinkedIn } from "@material-ui/icons";
+
 import "./contact.scss";
 
 export default function Contact() {
@@ -88,6 +90,38 @@ export default function Contact() {
               SEND
             </button>
           </form>
+          <div className="icons">
+            <div className="item-container">
+              <Person style={{ fontSize: 18 }} />
+              <span>+1 289 696 0360</span>
+            </div>
+            <div className="item-container">
+              <Mail style={{ fontSize: 18 }} />
+              <span>natalieyu30@gmail.com</span>
+            </div>
+            <div className="item-container">
+              <a
+                href="https://github.com/natalieyu30"
+                className="link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GitHub style={{ fontSize: 18 }} />
+                <span>https://github.com/natalieyu30</span>
+              </a>
+            </div>
+            <div className="item-container">
+              <a
+                href="https://www.linkedin.com/in/hyojung-yu-36b35612a/"
+                className="link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <LinkedIn style={{ fontSize: 18 }} />
+                <span>https://www.linkedin.com/in/hyojung-yu-36b35612a/</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
