@@ -117,7 +117,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <LinkedIn style={{ fontSize: 18 }} />
+                <LinkedIn style={{ fontSize: 20 }} />
                 <span>https://www.linkedin.com/in/hyojung-yu-36b35612a/</span>
               </a>
             </div>
