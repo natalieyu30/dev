@@ -19,8 +19,8 @@ export default function Menu({ menuOpen, setMenuOpen }) {
           </a>
         </li>
         <li className="nav-item" onClick={() => setMenuOpen(false)}>
-          <a href="#portfolio" className="link">
-            Portfolio
+          <a href="#projects" className="link">
+            Projects
           </a>
         </li>
         <li className="nav-item" onClick={() => setMenuOpen(false)}>

@@ -1,7 +1,7 @@
 import React from "react";
-import "./portfolioList.scss";
+import "./projectList.scss";
 
-export default function PortfolioList({ id, title, setSelected, active }) {
+export default function ProjectList({ id, title, setSelected, active }) {
   return (
     <li
       className={active ? "portfolio-list active" : "portfolio-list"}

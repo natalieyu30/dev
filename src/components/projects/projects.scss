@@ -1,0 +1,183 @@
+@import "../../global.scss";
+
+.projects {
+  padding-top: 20px;
+  background-color: lightcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-shadow: inset 0px 0px 3px 1px rgba($main-color, 0.1);
+
+  h1 {
+    font-size: 50px;
+    color: $mint-green-title;
+    overflow: hidden;
+  }
+
+  .filter {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 70%;
+
+    .project {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .images {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        // border: 1px solid red;
+        border-radius: 10px;
+        img {
+          float: right;
+          width: auto;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+      .info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #fefefe;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+
+        h4 {
+          font-size: 24px;
+          font-weight: 500;
+          color: $mint-green-title;
+          margin-bottom: 20px;
+        }
+        .desc {
+          color: #555;
+          font-size: 17px;
+          line-height: 32px;
+          padding-left: 0;
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-top: 16px;
+
+          .btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: $mint-green-color;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+          }
+          .btn:hover {
+            color: $mint-green-title;
+            background-color: rgba($mint-green-color, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+@include mediaMd {
+  .projects {
+    gap: 10px;
+    h1 {
+      font-size: 30px;
+      overflow: hidden;
+    }
+
+    .filter {
+      gap: 25px;
+    }
+    .container {
+      width: 80%;
+    }
+  }
+}
+
+@include mediaSm {
+  .projects {
+    gap: 10px;
+    h1 {
+      font-size: 30px;
+      overflow: hidden;
+    }
+
+    .filter {
+      gap: 10px;
+    }
+    .container {
+      margin-top: 20px;
+      width: 85%;
+    }
+  }
+}
+
+@include mediaMobile {
+  .projects {
+    padding-top: 5px;
+    gap: 0px;
+    h1 {
+      font-size: 26px;
+      overflow: hidden;
+    }
+
+    .filter {
+      margin: 3px 5px;
+      gap: 0px;
+    }
+    .container {
+      width: 80%;
+      .project {
+        flex-direction: column;
+        .images {
+          flex: 1;
+          img {
+            height: 150px;
+          }
+          .second-img {
+            display: none;
+          }
+        }
+        .info {
+          flex: 3;
+
+          h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+          .desc {
+            font-size: 15px;
+            line-height: 24px;
+          }
+          .buttons {
+            .btn {
+              padding: 6px 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

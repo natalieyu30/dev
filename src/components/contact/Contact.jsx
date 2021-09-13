@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Person, Mail, GitHub, LinkedIn } from "@material-ui/icons";
 
@@ -11,7 +11,38 @@ export default function Contact() {
       <div className="contact" id="contact">
         <div className="contact-wrap">
           <div className="left">
-            <img src="assets/code/contact.svg" alt="" />
+            <div className="image">
+              <img src="assets/code/contact.svg" alt="" />
+            </div>
+            <div className="icons">
+              <div className="icons-item-container">
+                <Person style={{ fontSize: 18, marginRight: 10 }} />
+                <span>+1 289 696 0360</span>
+              </div>
+              <div className="icons-item-container">
+                <Mail style={{ fontSize: 18, marginRight: 10 }} />
+                <span>natalieyu30@gmail.com</span>
+              </div>
+              <a
+                href="https://github.com/natalieyu30"
+                className="link icons-item-container"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GitHub style={{ fontSize: 18, marginRight: 10 }} />
+                <span>https://github.com/natalieyu30</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/hyojung-yu-36b35612a/"
+                className="link icons-item-container"
+                target="_blank"
+                rel="noreferrer"
+                // style={{ display: "flex", alignItems: "center" }}
+              >
+                <LinkedIn style={{ fontSize: 20, marginRight: 10 }} />
+                <span>https://www.linkedin.com/in/hyojung-yu-36b35612a/</span>
+              </a>
+            </div>
           </div>
           <div className="right success">
             <p>Thanks, I will reply ASAP! :)</p>
@@ -58,21 +89,84 @@ export default function Contact() {
     <div className="contact" id="contact">
       <div className="contact-wrap">
         <div className="left">
-          <img src="assets/code/contact.svg" alt="" />
+          <div className="image">
+            <img src="assets/code/contact.svg" alt="" />
+          </div>
+          <div className="icons">
+            <div
+              className="icons-item-container"
+              style={{ display: "flex", alignItems: "center", marginBottom: 8 }}
+            >
+              <Person style={{ fontSize: 18, marginRight: 10 }} />
+              <span className="span">+1 289 696 0360</span>
+            </div>
+            <div
+              className="icons-item-container"
+              style={{ display: "flex", alignItems: "center", marginBottom: 8 }}
+            >
+              <Mail style={{ fontSize: 18, marginRight: 10 }} />
+              <span className="span">natalieyu30@gmail.com</span>
+            </div>
+            <a
+              href="https://github.com/natalieyu30"
+              className="link icons-item-container"
+              target="_blank"
+              rel="noreferrer"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <GitHub
+                style={{ fontSize: 18, marginRight: 10, marginBottom: 8 }}
+              />
+              <span className="span">https://github.com/natalieyu30</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hyojung-yu-36b35612a/"
+              className="link icons-item-container"
+              target="_blank"
+              rel="noreferrer"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <LinkedIn
+                style={{ fontSize: 20, marginRight: 10, marginBottom: 8 }}
+              />
+              <span className="span">
+                https://www.linkedin.com/in/hyojung-yu-36b35612a/
+              </span>
+            </a>
+          </div>
         </div>
         <div className="right">
           <h1>Contact</h1>
           <form onSubmit={handleSubmit}>
             <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              placeholder="Name *"
+            />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+            <input
               id="email"
               type="email"
               name="email"
               required
-              placeholder="Email address"
+              placeholder="Email *"
             />
             <ValidationError
               prefix="Email"
               field="email"
+              errors={state.errors}
+            />
+            <input
+              id="subject"
+              type="text"
+              name="subject"
+              placeholder="Subject "
+            />
+            <ValidationError
+              prefix="Subject"
+              field="subject"
               errors={state.errors}
             />
             <textarea
@@ -90,38 +184,6 @@ export default function Contact() {
               SEND
             </button>
           </form>
-          <div className="icons">
-            <div className="item-container">
-              <Person style={{ fontSize: 18 }} />
-              <span>+1 289 696 0360</span>
-            </div>
-            <div className="item-container">
-              <Mail style={{ fontSize: 18 }} />
-              <span>natalieyu30@gmail.com</span>
-            </div>
-            <div className="item-container">
-              <a
-                href="https://github.com/natalieyu30"
-                className="link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <GitHub style={{ fontSize: 18 }} />
-                <span>https://github.com/natalieyu30</span>
-              </a>
-            </div>
-            <div className="item-container">
-              <a
-                href="https://www.linkedin.com/in/hyojung-yu-36b35612a/"
-                className="link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <LinkedIn style={{ fontSize: 20 }} />
-                <span>https://www.linkedin.com/in/hyojung-yu-36b35612a/</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

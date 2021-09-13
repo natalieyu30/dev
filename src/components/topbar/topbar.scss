@@ -5,7 +5,7 @@
   height: 70px;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #fff;
   color: $main-color;
   position: fixed;
   top: 0;
@@ -14,8 +14,9 @@
   transition: all 0.8s ease;
 
   .wrapper {
-    padding: 0px 30px;
-    width: 100%;
+    margin: 0 auto;
+    padding: 0px 40px;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,6 +67,34 @@
           transition: all 1s ease;
         }
       }
+      .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-size: 18px;
+        font-weight: 500;
+        .nav-item {
+          .link {
+            display: block;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+            padding: 23px 0;
+          }
+          .current {
+            border-bottom: 3px solid $main-color;
+          }
+        }
+      }
+    }
+  }
+  @include mediaMd {
+    .wrapper {
+      width: 100%;
+    }
+  }
+  @include mediaSm {
+    .wrapper {
+      width: 100%;
     }
   }
 
@@ -95,6 +124,29 @@
           transform: rotate(-45deg);
           top: 1px;
           right: -2px;
+        }
+      }
+    }
+  }
+  &.main-bg {
+    background-color: $main-color;
+    color: white;
+    .logo {
+      img {
+        content: url("../../assets/natdev_wht.png");
+      }
+    }
+    .right {
+      .hamburger {
+        span {
+          background-color: #fff;
+        }
+      }
+      .nav-list {
+        .nav-item {
+          .current {
+            border-bottom: 3px solid #fff;
+          }
         }
       }
     }
