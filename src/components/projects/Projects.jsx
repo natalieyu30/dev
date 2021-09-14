@@ -11,7 +11,7 @@ import { GitHub, OpenInNew } from "@material-ui/icons";
 
 export default function Projects() {
   const [selected, setSelected] = useState("js");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   const list = [
     { id: "js", title: "HTML/CSS/JS" },
@@ -53,25 +53,33 @@ export default function Projects() {
           />
         ))}
       </ul>
-      <div className="container">
-        {data.map((d) => (
+      {data && (
+        <div className="container">
+          {/* {data.map((d) => ( */}
           <div className="project">
             <div className="images">
-              <img src={d.img[0]} alt={d.title} />
-              <img src={d.img[1]} alt={d.title} className="second-img" />
+              <img
+                src={`${process.env.PUBLIC_URL}${data.img[0]}`}
+                alt={data.title}
+              />
+              <img
+                src={`${process.env.PUBLIC_URL}${data.img[1]}`}
+                alt={data.title}
+                className="second-img"
+              />
             </div>
             <div className="info">
               <div>
-                <h4>{d.title}</h4>
+                <h4>{data.title}</h4>
                 <ul className="desc">
-                  {d.desc.map((content, index) => (
+                  {data.desc.map((content, index) => (
                     <li key={index}>- {content}</li>
                   ))}
                 </ul>
               </div>
               <div className="buttons">
                 <a
-                  href={d.github}
+                  href={data.github}
                   target="_blank"
                   rel="noreferrer"
                   className="btn"
@@ -80,7 +88,7 @@ export default function Projects() {
                   GitHub
                 </a>
                 <a
-                  href={d.site}
+                  href={data.site}
                   target="_blank"
                   rel="noreferrer"
                   className="btn"
@@ -91,8 +99,9 @@ export default function Projects() {
               </div>
             </div>
           </div>
-        ))}
-      </div>
+          {/* ))} */}
+        </div>
+      )}
     </div>
   );
 }
