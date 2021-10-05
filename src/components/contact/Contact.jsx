@@ -30,7 +30,7 @@ export default function Contact() {
                 rel="noreferrer"
               >
                 <GitHub style={{ fontSize: 18, marginRight: 10 }} />
-                <span>https://github.com/natalieyu30</span>
+                <span>Github</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/hyojung-yu-36b35612a/"
@@ -40,7 +40,7 @@ export default function Contact() {
                 // style={{ display: "flex", alignItems: "center" }}
               >
                 <LinkedIn style={{ fontSize: 20, marginRight: 10 }} />
-                <span>https://www.linkedin.com/in/hyojung-yu-36b35612a/</span>
+                <span>LinkedIn</span>
               </a>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function Contact() {
               <GitHub
                 style={{ fontSize: 18, marginRight: 10, marginBottom: 8 }}
               />
-              <span className="span">https://github.com/natalieyu30</span>
+              <span className="span">Github</span>
             </a>
             <a
               href="https://www.linkedin.com/in/hyojung-yu-36b35612a/"
@@ -129,9 +129,7 @@ export default function Contact() {
               <LinkedIn
                 style={{ fontSize: 20, marginRight: 10, marginBottom: 8 }}
               />
-              <span className="span">
-                https://www.linkedin.com/in/hyojung-yu-36b35612a/
-              </span>
+              <span className="span">LinkedIn</span>
             </a>
           </div>
         </div>
